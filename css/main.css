@@ -1,0 +1,74 @@
+/* Convert to grid rather than float. Take out the sizing for each block and instead use grid-tempate-columns or rows with sizing */
+
+body {
+  background-color: #E8E8E8;
+}
+#vision-board {
+  width: 1200px;
+  height: 850px;
+  margin: 50px auto;
+  background-image: url("../img/background.png");
+  background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(210px 430px 210px);
+}
+/*.block { float and width not needed. not sure about border box.
+/*  float: left;
+  width: 400px;
+  box-sizing: border-box; */
+/*} */
+.small-block {
+  padding: 20px 40px;
+/*	height: 210px; */ /* height in grid-template-rows */
+}
+.large-block {
+  padding: 70px 40px;
+/*	height: 430px; */ /* height in grid-template-rows */
+}
+/*.clear {  no floats so no need to clear
+  clear: both;
+} */
+
+/* could have aligned with flex */
+.center-text {
+  text-align: center;
+}
+.right-text {
+  text-align: right;
+}
+.light-bg {
+  background-color: #FFFFFF;
+}
+.dark-bg {
+  background-color: #3B3B3B;
+}
+h1 {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+h1 span {
+  background-color: #FFF44F;
+  padding: 5px 15px;
+}
+p span {
+  font-size: 38px;
+  text-transform: capitalize;
+  /* text-transform: none; */
+  line-height: 38px;
+}
+.title span {
+  font-family: 'Permanent Marker', cursive;
+  font-weight: normal;
+}
+.title {
+  color: #FFFFFF;
+  margin: 10px 0;
+  font-size: 30px;
+}
